@@ -1,0 +1,25 @@
+.typewriter {
+    position: relative;
+    white-space: pre-wrap;
+    font-family: monospace;
+    line-height: 1.5;
+    
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      height: 1.2em;
+      background-color: #c3f708;
+      margin-left: 2px;
+      animation: blink 1s infinite;
+      vertical-align: middle;
+    }
+    
+    &.done .cursor {
+      display: none;
+    }
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }

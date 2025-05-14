@@ -1,0 +1,50 @@
+.clash-bg {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    z-index: -10;
+    overflow: hidden;
+  }
+  
+  .clash-left,
+  .clash-right {
+    flex: 1;
+    transition: flex 1s ease-in-out;
+    animation: pulse 4s ease-in-out infinite;
+  }
+  
+  .clash-left {
+    background: radial-gradient(circle at center, #3498db, #1f3a93);
+  }
+  
+  .clash-right {
+    background: radial-gradient(circle at center, #e74c3c, #8e0e00);
+  }
+
+  .zigzag-divider {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    mix-blend-mode: screen;
+    filter: drop-shadow(0 0 5px white);
+  }
+  
+  
+  @keyframes pulse {
+    0%, 100% {
+      flex: 1;
+    }
+    50% {
+      flex: 1.1;
+    }
+  }
+
+  @keyframes jiggle {
+    from {
+      transform: translateX(-50%) skewY(-2deg);
+    }
+    to {
+      transform: translateX(-50%) skewY(2deg);
+    }
+  }
